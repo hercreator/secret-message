@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Zeyada&family=Pacifico&display=swap');
+
+body {
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #ffdde1, #ee9ca7, #ffd6e8);
+  background-size: 400% 400%;
+  animation: romanticBg 10s ease infinite;
+}
+
+@keyframes romanticBg {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+body::before {
+  content: "❤️ 💕 💖 💘 💝 ❤️ 💕 💖 💘 💝 ❤️ 💕";
+  position: fixed;
+  top: -40px;
+  left: 0;
+  width: 100%;
+  font-size: 35px;
+  letter-spacing: 35px;
+  animation: floatingHearts 8s linear infinite;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+@keyframes floatingHearts {
+  from { transform: translateY(-50px); }
+  to { transform: translateY(110vh); }
+}
+
+.paper {
+  background: #fff8fb;
+  background-image: linear-gradient(145deg, #fff, #ffe6ef);
+  padding: 25px 80px;
+  border-radius: 18px;
+  border: 2px solid #ff9ebc;
+  box-shadow: 0 15px 35px rgba(255, 75, 130, 0.35);
+  position: absolute;
+  transform: rotateZ(-5deg);
+}
+
+.paper::before {
+  content: "❤️";
+  position: absolute;
+  top: 8px;
+  right: 15px;
+  font-size: 25px;
+  color: #ff4f8b;
+}
+
+.paper.heart {
+  width: 200px;
+  height: 200px;
+  padding: 0;
+  border-radius: 50%;
+  background: radial-gradient(circle, #ffb6c1, #ff4f8b);
+}
+
+.paper.heart::after {
+  content: "❤️";
+  font-size: 90px;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.paper.image {
+  padding: 12px;
+}
+
+.paper.image p {
+  font-size: 32px;
+}
+
+img {
+  max-height: 220px;
+  width: 100%;
+  border-radius: 15px;
+  user-select: none;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+p {
+  font-family: 'Zeyada', cursive;
+  font-size: 52px;
+  color: #b3004b;
+  opacity: 0.9;
+  user-select: none;
+  text-align: center;
+  margin: 10px;
+}
+
+.watermark {
+  position: fixed;
+  bottom: 12px;
+  right: 18px;
+  font-size: 18px;
+  font-family: 'Pacifico', cursive;
+  color: #8b004f;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+  z-index: 9999;
+  pointer-events: none;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+}
+
+.main-title {
+  position: fixed;
+  top: 20px;
+  width: 100%;
+  text-align: center;
+  font-size: 42px;
+  font-family: 'Pacifico', cursive;
+  color: #8b004f;
+  text-shadow: 0 0 12px rgba(255,255,255,0.7);
+  z-index: 9999;
+  animation: fadeGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes fadeGlow {
+  from {
+    opacity: 0.8;
+    transform: scale(1);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1.03);
+  }
+}
+
+.left-watermark {
+  position: fixed;
+  bottom: 12px;
+  left: 18px;
+  font-size: 18px;
+  font-family: 'Pacifico', cursive;
+  color: #8b004f;
+  text-shadow: 0 0 8px rgba(255,255,255,0.5);
+  z-index: 9999;
+  pointer-events: none;
+  animation: glow 2s ease-in-out infinite alternate;
+}
