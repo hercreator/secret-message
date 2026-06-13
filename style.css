@@ -45,6 +45,7 @@ body::before {
   box-shadow: 0 15px 35px rgba(255, 75, 130, 0.35);
   position: absolute;
   transform: rotateZ(-5deg);
+  touch-action: none;
 }
 
 .paper::before {
@@ -171,4 +172,9 @@ p {
   opacity: 1;
   margin-top: -10px;
   text-shadow: 0 0 4px rgba(255,255,255,0.6);
+}
+
+html, body {
+  touch-action: none;
+  overflow: hidden;
 }
